@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { folder, item } from '$lib';
-    import Folder from '$lib/nav/folder.svelte';
-    import Item from '$lib/nav/item.svelte';
+    import { folder, item } from '$lib/nav/navigation_bar_config';
+    import Folder from '$lib/nav/tree/folder.svelte';
+    import Item from '$lib/nav/tree/item.svelte';
 
     let { tree } = $props();
 </script>

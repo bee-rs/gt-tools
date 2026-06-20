@@ -1,5 +1,5 @@
 <script lang="ts">
-    import GenerateTree from './generate_tree.svelte';
+    import GenerateTree from '$lib/nav/tree/generate_tree.svelte';
     import folder_open from '$lib/assets/folder_open.png'
     import folder_close from '$lib/assets/folder_close.png'
 
@@ -37,10 +37,15 @@
     .folder {
         width: 95.5%;
         padding: 5px;
+
+        border-radius: 5px 0 0 5px;
+    }
+    .folder:hover {
+        background-color: hsl(240, 100%, 14%);
     }
     section {
         margin-left: 15px;
-        padding-left: 8px;
+        padding-left: 3px;
 
         border-left: 1px solid hsl(0, 0%, 96%);
     }

@@ -1,19 +1,6 @@
 <script lang="ts">
-    import { folder, item } from '$lib';
-    import GenerateTree from './generate_tree.svelte';
-
-    let tree = [
-        new item("test item", "/test_item"),
-        new folder("Star Technology", [
-            new item("something to make it overflow", "/line"),
-            new item("some other line", "/some_other line"),
-            new folder("test folder",[
-                new item("test", "/test"),
-                new item("test", "/test"),
-                new item("test", "/test"),
-            ]),
-        ]),
-    ];
+    import { tree } from '$lib/nav/navigation_bar_config';
+    import GenerateTree from '$lib/nav/tree/generate_tree.svelte'
 </script>
 
 <nav>

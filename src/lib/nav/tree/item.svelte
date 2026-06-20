@@ -26,6 +26,10 @@
         overflow-wrap: anywhere;
 
         margin: 5px 0;
-        padding: 2px 0;
+        padding: 2px 5px;
+        border-radius: 5px 0 0 5px;
+    }
+    .element-box:hover {
+        background-color: hsl(240, 100%, 14%);
     }
 </style>
