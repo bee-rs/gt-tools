@@ -22,15 +22,17 @@ export class folder {
     }
 }
 
-export let tree = [
+export const tree = $state([
     new item("test item", "/test_item"),
     new folder("Star Technology", [
         new item("something to make it overflow", "/line"),
         new item("some other line", "/some_other line"),
-        new folder("test folder",[
+         new folder("test folder",[
             new item("test", "/test"),
             new item("test", "/test"),
             new item("test", "/test"),
-         ]),
+        ]),
     ]),
-];
+]);
+
+export const visible = $state({ state: true });

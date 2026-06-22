@@ -1,7 +1,7 @@
 <script lang="ts">
     import GenerateTree from '$lib/nav/tree/generate_tree.svelte';
-    import folder_open from '$lib/assets/folder_open.png'
-    import folder_close from '$lib/assets/folder_close.png'
+    import folder_open from '$lib/assets/arrow_right.png'
+    import folder_close from '$lib/assets/arrow_down.png'
 
     let { element } = $props();
 

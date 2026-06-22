@@ -1,12 +1,14 @@
 <script lang="ts">
     import { Viewer } from 'svelte-image-viewer';
+    import { visible } from './nav/navigation_bar_config.svelte';
+    import Open from './nav/functionality/visible/open.svelte';
 
 	let { children } = $props();
 </script>
 
 <Viewer>
 	<div class="scroll">
-    	<main>
+    	<main class:with_bar={visible.state} class:without_bar={!visible.state}>
 			{@render children()}
     	</main>
 	</div>
@@ -27,13 +29,19 @@
         background-size: 120px 120px, 120px 120px, 60px 60px, 60px 60px;
         background-color: #F5F5F5;
     }
-
 	main {
 		height: 100vh;
-		width: 84vw;
-
-		margin-left: 16vw;
 
 		border: 5px solid pink;
 	}
+    .with_bar {
+    	width: 84vw;
+
+		margin-left: 16vw;
+    }
+    .without_bar {
+		width: 100vw;
+
+		margin-left: 0;
+    }
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { folder, item } from '$lib/nav/navigation_bar_config';
+    import {item, folder} from '../navigation_bar_config.svelte';
     import Folder from '$lib/nav/tree/folder.svelte';
     import Item from '$lib/nav/tree/item.svelte';
 

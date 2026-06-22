@@ -1,11 +1,16 @@
 <script lang="ts">
-    import { tree } from '$lib/nav/navigation_bar_config';
+    import { visible, tree } from './navigation_bar_config.svelte.ts';
     import GenerateTree from '$lib/nav/tree/generate_tree.svelte'
+    import SearchBar from '$lib/nav/functionality/search/search_bar.svelte';
+    import { fly } from 'svelte/transition';
 </script>
 
-<nav>
-    <GenerateTree tree={tree} />
-</nav>
+{#if visible.state}
+    <nav transition:fly={{x: -350, duration: 2000}}>
+        <SearchBar />
+        <GenerateTree tree={tree} />
+    </nav>
+{/if}
 
 <style>
     nav {
@@ -14,9 +19,10 @@
 
         position: fixed;
         left: 0;
-        z-index: 1;
+        z-index: 2;
 
         background-color: hsl(240, 100%, 8%);
         color: hsl(0, 0%, 96%);
     }
+
 </style>

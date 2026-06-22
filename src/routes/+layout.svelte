@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { NavigationBar, MainBox } from '$lib';
+	import { NavigationBar, MainBox, OpenNavBar } from '$lib';
 
 	let { children } = $props();
 </script>
@@ -8,6 +8,7 @@
 	<link href="https://cdn.jsdelivr.net/npm/typeface-minecraft@1.0.0/index.min.css" rel="stylesheet">
 </svelte:head>
 
+<OpenNavBar />
 <NavigationBar />
 
 <MainBox>
@@ -20,6 +21,7 @@
         background-color: black;
         overflow: hidden;
         margin: 0;
+        padding: 0;
 
         display: flex;
 
